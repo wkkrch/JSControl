@@ -1,92 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        * {
-            margin: 0;
-        }
-
-        body {
-            background-color: darkseagreen;
-        }
-
-        #main {
-            background-color: whitesmoke;
-            width: 700px;
-            height: 550px;
-            margin: 60px auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            gap: 24px;
-            padding: 25px;
-        }
-        #testBlock{
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-        }
-        #testBlock h1{
-            font-size: 25px;
-            font-family: sans-serif;
-        }
-        #buttons{
-            display: flex;
-            flex-direction: column;
-            margin-top: 102px;
-            gap: 50px;
-        }
-        #sort{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        #i1{
-            width: 360px;
-            height: 25px;
-            border: 2px solid gray;
-            border-radius: 3px;
-            background-color: white;
-        }
-        #userInput{
-            display: flex;
-            flex-direction: column;
-        }
-        #userInfo{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        #userDisplay div{
-            width: 360px;
-            height: 360px;
-            background-color: white;
-            border: 2px solid gray;
-            overflow: auto;
-        }
-        button{
-            height: 23px;
-            width: auto;
-            background-color: white;
-            border: 2px solid gray;
-        }
-
-
-    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="main">
+<main id="main">
     <div id="testBlock">
         <h1>Test</h1>
         <div id="userInfo">
             <div id="userInput">
-                <label for="i1">Name/Value Pair</label>
+                <label id="label" for="i1">Name/Value Pair</label>
                 <input id="i1" type="text" name="value" placeholder="Name=Value">
             </div>
             <div id="userDisplay">
-                <p>Name/Value Pair List</p>
+                <p id="label2">Name/Value Pair List</p>
                 <div id="valueBlock"></div>
             </div>
         </div>
@@ -99,7 +31,7 @@
         </div>
         <button id="delete">Delete</button>
     </div>
-</div>
+</main>
 <script src="main.js"></script>
 </body>
 </html>

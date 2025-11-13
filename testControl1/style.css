@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: lightsteelblue;
+}
+
+#main {
+    background-color: whitesmoke;
+    width: 55vw;
+    height: 65vh;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 25px;
+}
+#testBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#testBlock h1{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+#buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 102px;
+    gap: 50px;
+}
+#sort{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#i1{
+    width: 30vw;
+    height: 4vh;
+    border: 2px solid gray;
+    border-radius: 3px;
+    background-color: white;
+}
+#userInput{
+    display: flex;
+    flex-direction: column;
+}
+#userInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#userDisplay div{
+    width: 30vw;
+    height: 30vh;
+    background-color: white;
+    border: 2px solid gray;
+    overflow: auto;
+}
+button{
+    height: 23px;
+    width: auto;
+    background-color: white;
+    border: 2px solid gray;
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px){
+    #main {
+        background-color: whitesmoke;
+        width: 75vw;
+        height: 65vh;
+    }
+    #i1{
+        width: 50vw;
+        height: 4vh;
+    }
+    #userDisplay div{
+        width: 50vw;
+        height: 30vh;
+    }
+    button{
+        height: 4vh;
+    }
+}
+@media screen and (max-width: 576px){
+    #main {
+        background-color: whitesmoke;
+        width: 80vw;
+        height: 80vh;
+        margin: 60px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 24px;
+        padding: 25px;
+    }
+    #testBlock{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    #testBlock h1{
+        font-size: 25px;
+        font-family: sans-serif;
+    }
+    #buttons{
+        display: flex;
+        flex-direction: column;
+        margin-top: 102px;
+        gap: 50px;
+    }
+    #i1{
+        width: 80vw;
+        height: 4vh;
+        border: 2px solid gray;
+        border-radius: 3px;
+        background-color: white;
+        font-size: 1.2rem;
+    }
+    #userInput{
+        display: flex;
+        flex-direction: column;
+    }
+    #userInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #label, #label2{
+        font-size: 1.3rem;
+    }
+    #userDisplay div{
+        width: 80vw;
+        height: 30vh;
+        background-color: white;
+        border: 2px solid gray;
+        overflow: auto;
+        font-size: 1.2rem;
+    }
+    button{
+        height: 30px;
+        background-color: white;
+        border: 2px solid gray;
+        font-size: 1.2rem;
+        width: 150px;
+        margin: 0 auto;
+    }
+    #buttons{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+
+}

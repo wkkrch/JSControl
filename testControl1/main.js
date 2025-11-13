@@ -24,7 +24,35 @@ deleteBut.onclick = function () {
 }
 const sortName = document.getElementById('sortName');
 const sortValue = document.getElementById('sortValue');
-sortName.onclick = function () {
-    const array = JSON.parse(localStorage.getItem('array'));
+
+sortName.onclick = function(){
+    const array = JSON.parse(localStorage.getItem('array')) || [];
+    const sort = array.sort((a, b) => {
+        const nameA = a.split('=')[0].trim().toLowerCase();
+        const nameB = b.split('=')[0].trim().toLowerCase();
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
+        return 0;
+    });
+    localStorage.setItem('array', JSON.stringify(array));
+    valueBlock.innerHTML = '';
+    for (let i = 0; i < sort.length; i++) {
+        valueBlock.innerHTML += `${sort[i]} <br>`
+    }
+}
+sortValue.onclick = function (){
+    const array = JSON.parse(localStorage.getItem('array')) || [];
+    const sort = array.sort((a, b) => {
+        const valueA = a.split('=')[1].trim().toLowerCase();
+        const valueB = b.split('=')[1].trim().toLowerCase();
+        if (valueA < valueB) return -1;
+        if (valueA > valueB) return 1;
+        return 0;
+    });
+    localStorage.setItem('array', JSON.stringify(array));
+    valueBlock.innerHTML = '';
+    for (let i = 0; i < sort.length; i++) {
+        valueBlock.innerHTML += `${sort[i]} <br>`
+    }
 
 }
